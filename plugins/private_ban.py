@@ -9,11 +9,11 @@ from utils import html_user
 
 async def privbanrep(m: Message):
     try:
-        if m.reply_to_message.forward_from.id == 5656828413:
+        if m.reply_to_message.forward_from.id == 1310488710:
             await m.reply_text("◍ لايمكننى حظر المطور\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/UURTBOT/36", reply_to_message_id=m.message_id)
             return
-        elif m.reply_to_message.forward_from.id == 5256751101:
+        elif m.reply_to_message.forward_from.id == 1310488710:
             await m.reply_text("◍ لايمكننى ²حظر المطور\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/UURTBOT/36", reply_to_message_id=m.message_id)
             return
@@ -68,7 +68,7 @@ async def privbanuser(c: Client, m: Message):
             await m.reply_animation("https://t.me/UURTBOT/36", reply_to_message_id=m.message_id)
             return
         else:
-            if chat_id_foruser == 5256751101:
+            if chat_id_foruser == 1310488710:
                 await m.reply_text("◍ ²لايمكننى حظر المطور\n√\n√", reply_to_message_id=m.message_id)
                 await m.reply_animation("https://t.me/UURTBOT/36", reply_to_message_id=m.message_id)
                 return
