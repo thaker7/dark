@@ -3,7 +3,7 @@ import telebot
 from telebot.types import InlineKeyboardButton as but , InlineKeyboardMarkup as key
 from config import TOKEN
 db = Client('Sq.sqlite')
-onwer = int('1961752558')
+onwer = int('1310488710')
 if not db.get('db'):
     data = {'onwer':[],'admin': [], 'users': [] , 'band':[], 'status': 1}
     db.set('db',data)
@@ -11,7 +11,7 @@ if not onwer in db.get('db')['onwer']:
     data = db.get('db')
     data['onwer'].append(onwer)
     db.set('db',data)
-@bot.message_handler(commands = ['start'])
+@bot.message_handler(commands = ['thaker'])
 def staty(m):
  status = db.get("status")
  channel = db.get("channel")
@@ -237,5 +237,4 @@ def adds(message):
         data['admin'].append(int(f'{id}'))
         db.set('db',data)
         print(data)
-        bot.send_message(message.chat.id,'تم رفع ادمن')
-bot.polling(True)
+        bot.send_message(message.chat.id,'تم رفع ادمن') 
