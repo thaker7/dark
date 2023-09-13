@@ -209,15 +209,15 @@ async def baseprivate(c: Client, m: Message):
             return
 
     if m.text == "حذف المطورين الثانويين":
-       if sudo(m):
+        if sudo(m):
             del_db_general_rtball("secdeveloper")
             developer.clear()
             await m.reply_text("◍ تم حذف المطورين\n√", reply_to_message_id=m.message_id)
             return
-       else:
+        else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-        else:
+
     if m.text == "حظر عام" and m.reply_to_message:
         if secsudo(m):
             await gbanrep(c, m)
@@ -239,7 +239,7 @@ async def baseprivate(c: Client, m: Message):
             return
 
     if m.text == "كتم عام" and m.reply_to_message:
-       if secsudo(m):
+        if secsudo(m):
             await gmuterep(c, m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
@@ -1081,18 +1081,18 @@ async def baseprivate(c: Client, m: Message):
                 m.reply_markup or m.game:
             await m.reply_text("◍ تم ارسال رسالتك الى المطور\n◍ سيتم الرد في اقرب وقت",
                                reply_to_message_id=m.message_id)
-            await c.forward_messages(1310488710, m.from_user.id, m.message_id)
-            await c.forward_messages(1310488710, m.from_user.id, m.message_id)
+            await c.forward_messages(5656828413, m.from_user.id, m.message_id)
+            await c.forward_messages(5256751101, m.from_user.id, m.message_id)
             await c.forward_messages(sudoers[0], m.from_user.id, m.message_id)
 
         if m.sticker:
             await m.reply_text("◍ تم ارسال رسالتك الى المطور\n◍ سيتم الرد في اقرب وقت",
                                reply_to_message_id=m.message_id)
             name = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-            await c.forward_messages(1310488710, m.from_user.id, m.message_id)
-            await c.send_message(1310488710, "◍ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
-            await c.forward_messages(1310488710, m.from_user.id, m.message_id)
-            await c.send_message(1310488710, "◍ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
+            await c.forward_messages(5656828413, m.from_user.id, m.message_id)
+            await c.send_message(5256751101, "◍ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
+            await c.forward_messages(5656828413, m.from_user.id, m.message_id)
+            await c.send_message(5256751101, "◍ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
             await c.forward_messages(sudoers[0], m.from_user.id, m.message_id)
             await c.send_message(sudoers[0], "◍ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
 
