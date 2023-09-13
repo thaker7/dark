@@ -217,43 +217,7 @@ async def baseprivate(c: Client, m: Message):
        else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if m.text == 'تفعيل الاشتراك':
-       if r.get(f"enable_force_subscribe{bot_id}"):
-          return await m.reply('• تم تفعيل الاشتراك الاجباري مسبقاً',quote=True)
-          await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل الاشتراك بنجاح**', quote=True) 
-        r.set(f"enable_force_subscribe{bot_id}", 1)
-      
-   if m.text == 'تعطيل الاشتراك':
-       if not r.get(f"enable_force_subscribe{bot_id}"):
-          return await m.reply('• تم تعطيل الاشتراك الاجباري مسبقاً',quote=True)
-          await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تعطيل الاشتراك بنجاح**', quote=True) 
-        r.delete(f"enable_force_subscribe{bot_id}")
-      
-   if m.text == 'ضع قناة الاشتراك':
-   await m.reply("• ارسل معرف القناة العام مثال @Y88F8", quote=True)
-        r.set(f"{m.from_user.id}addchannel{m.chat.id}{bot_id}",1)
-        r.delete(f"{m.from_user.id}addadmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}transfer{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}deladmin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastfor{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcastpin{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}broadcast{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroad{m.chat.id}{bot_id}")
-        r.delete(f"{m.from_user.id}gbroadpin{m.chat.id}{bot_id}")
-      
-   if m.text == 'حذف قناة الاشتراك':
-       if not r.get(f'force_channel{bot_id}'):
-          return await m.reply("• لا توجد قناة اشتراك معينة", quote=True)
-          await m.reply("• تم حذف قناة الاشتراك بنجاح", quote=True)
-        r.delete(f'force_channel{bot_id}')
-      
-   if m.text == 'قناة الاشتراك':
-       if not r.get(f'force_channel{bot_id}'):
-       await m.reply('• لاتوجد قناة مضافة', quote=True)
         else:
-        channel = r.get(f'force_channel{bot_id}').decode('utf-8')
-          await m.reply(f"https://t.me/{channel}", quote=True)
-
     if m.text == "حظر عام" and m.reply_to_message:
         if secsudo(m):
             await gbanrep(c, m)
