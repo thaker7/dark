@@ -220,13 +220,13 @@ async def baseprivate(c: Client, m: Message):
     if m.text == 'تفعيل الاشتراك':
        if r.get(f"enable_force_subscribe{bot_id}"):
           return await m.reply('• تم تفعيل الاشتراك الاجباري مسبقاً',quote=True)
-            await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل الاشتراك بنجاح**', quote=True) 
+           await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل الاشتراك بنجاح**', quote=True) 
         r.set(f"enable_force_subscribe{bot_id}", 1)
       
    if m.text == 'تعطيل الاشتراك':
        if not r.get(f"enable_force_subscribe{bot_id}"):
           return await m.reply('• تم تعطيل الاشتراك الاجباري مسبقاً',quote=True)
-            await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تعطيل الاشتراك بنجاح**', quote=True) 
+           await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تعطيل الاشتراك بنجاح**', quote=True) 
         r.delete(f"enable_force_subscribe{bot_id}")
       
    if m.text == 'ضع قناة الاشتراك':
@@ -244,7 +244,7 @@ async def baseprivate(c: Client, m: Message):
    if m.text == 'حذف قناة الاشتراك':
        if not r.get(f'force_channel{bot_id}'):
           return await m.reply("• لا توجد قناة اشتراك معينة", quote=True)
-            await m.reply("• تم حذف قناة الاشتراك بنجاح", quote=True)
+           await m.reply("• تم حذف قناة الاشتراك بنجاح", quote=True)
         r.delete(f'force_channel{bot_id}')
       
    if m.text == 'قناة الاشتراك':
