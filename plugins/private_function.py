@@ -217,7 +217,7 @@ async def baseprivate(c: Client, m: Message):
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-                  if m.text == 'تفعيل الاشتراك':
+    if m.text == 'تفعيل الاشتراك':
         if r.get(f"enable_force_subscribe{bot_id}"):
           return await m.reply('• تم تفعيل الاشتراك الاجباري مسبقاً',quote=True)
         await m.reply(f'**• بواسطة ⟨ {m.from_user.mention} ⟩\n• تم تفعيل الاشتراك بنجاح**', quote=True) 
