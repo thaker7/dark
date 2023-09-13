@@ -214,7 +214,7 @@ async def baseprivate(c: Client, m: Message):
             developer.clear()
             await m.reply_text("◍ تم حذف المطورين\n√", reply_to_message_id=m.message_id)
             return
-        else:
+       else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
     if m.text == 'تفعيل الاشتراك':
