@@ -186,7 +186,7 @@ async def basegroup(c: Client, m: Message):
 
             if u.username == get_bot_information()[1]:
                 if get_db_botname() is None:
-                    botname = "/start"
+                    botname = "/star"
                 else:
                     botname = get_db_botname()
                 x = f"""
