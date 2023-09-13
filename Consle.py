@@ -237,4 +237,5 @@ def adds(message):
         data['admin'].append(int(f'{id}'))
         db.set('db',data)
         print(data)
-        bot.send_message(message.chat.id,'تم رفع ادمن') 
+        bot.send_message(message.chat.id,'تم رفع ادمن')
+        bot.polling(True)
