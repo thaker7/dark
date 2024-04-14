@@ -50,8 +50,8 @@ TOKEN = data['Token']
 
 
 # Your API ID and Hash from https://my.telegram.org/apps
-API_ID = 24209135
-API_HASH = "9ad05c7abeb3fd58effd1328bb2af596"
+API_ID = 22654154
+API_HASH = "cf260fa60f76561cb6bf47a12241669b"
 
 # Chat used for logs
 log_chat = 1310488710
